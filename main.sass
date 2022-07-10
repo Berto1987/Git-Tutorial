@@ -1,0 +1,67 @@
+//VARIABLES
+$brand-main:   #6600CC
+$brand-sub:   #CC66FF
+$brand-dark: orange
+$brand-light: magenta
+
+
+
+
+//MIXIMS
+=shaping($height,$width,$rad,$bg,$color)
+    height: $height
+    width: $width
+    -webkit-border-radius: $rad 
+    -moz-border-radius: $rad 
+    -ms-border-radius: $rad 
+    border-radius: $rad 
+    background-color: $bg 
+    color: $color 
+
+=btn-main($padding,$rad,$bg,$color)
+    padding: $padding
+    border-radius: $rad 
+    background-color: $bg 
+    color: $color 
+    border-width: 0
+    border-style: none
+    cursor: pointer
+    display: block
+    margin: auto
+
+
+
+//STYLES
+body
+    background-color: $brand-main
+h1
+    text-align: center
+    padding-top: 30px
+
+section
+    background-color: $brand-dark
+    color: $brand-sub
+    width: 780px
+    margin: auto
+    border-radius: 20px 
+    padding: 10px
+    position: relative
+    z-index: -2
+.thumb1
+    +shaping(100px,100px,10%,$brand-dark,$brand-main)
+    margin: 0 300px -90px
+.thumb2
+    +shaping(100px,100px,50%,$brand-dark,$brand-sub)
+    margin: 0 auto 
+    
+.btn-1
+    +btn-main(20px 30px,8px,$brand-dark,red)
+    
+.btn-2
+    +btn-main(30px,50%,$brand-sub,red)
+    font-size: 20px
+    
+    
+
+    
+    
